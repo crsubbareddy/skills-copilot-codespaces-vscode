@@ -1,13 +1,11 @@
-// create web server
-const express = require('express');
-const app = express();
+// Create web server and listen on port 3000
+// This file is the controller for the comments page
 
-// create a route for comments
-app.get('/comments', (req, res) => {
-    res.send('This is a route for comments');
-});
-
-// start the server
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
-});
+// Load the express module
+var express = require('express');
+// Create an express application
+var app = express();
+// Load the body-parser module
+var bodyParser = require('body-parser');
+// Load the comments model
+var Comments = require('./models/comments
